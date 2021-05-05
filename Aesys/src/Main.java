@@ -7,7 +7,9 @@ public class Main {
         int n,k,row,col,pir;
         char ris;
         do {
-            System.out.println("inserisci un numero (0 per uscire):");
+            System.out.println("inserisci un numero\n0: per uscire");
+            System.out.println("1: esrecizio matrici");
+            System.out.println("2; esercizio piramide");
             n = sc.nextInt();
             switch (n){
                 case 0:
