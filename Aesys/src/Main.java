@@ -9,7 +9,7 @@ public class Main {
         do {
             System.out.println("inserisci un numero\n0: per uscire");
             System.out.println("1: esrecizio matrici");
-            System.out.println("2; esercizio piramide ");
+            System.out.println("2; esercizio piramide");
             n = sc.nextInt();
             switch (n){
                 case 0:
