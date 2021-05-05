@@ -5,7 +5,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int n,k,row,col,pir;
-        char ris;
         do {
             System.out.println("inserisci un numero\n0: per uscire");
             System.out.println("1: esrecizio matrici");
@@ -38,6 +37,7 @@ public class Main {
                     break;
                 default:
                     System.out.println("errore inserire un numero tra 0 a 2");
+
             }
         } while(n != 0);
     }
