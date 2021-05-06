@@ -1,29 +1,29 @@
 import java.util.Scanner;
 
 public class Operazoni {
+    private float a,b;
+    private char k;
 
-    public static void Gestore() {
-        Scanner sc = new Scanner(System.in);
-        float a,b;
-        char k;
-        System.out.println("Scegli l'operazione da voler eseguire tra +,-,*,/ o altro carattere per uscire:\n");
-        k = sc.next().charAt(0);
-        if(k == '*' || k == '+' || k == '-' || k == '/'){
-            System.out.println("Inserisci i 2 valori su cui lavorare:");
-            a = sc.nextFloat();
-            b = sc.nextFloat();
-            Scelta(a,b,k);
-        }
+    /**
+     *
+     * @param a
+     * @param b
+     * @param k
+     */
+    public Operazoni(float a, float b, char k){
+        this.a = a;
+        this.b = b;
+        this.k = k;
     }
 
-    public static void Scelta(float a, float b, char k) {
-        float r = 0, c = 0;
+    public void scelta() {
+        float r = 0,c = 0;
         Scanner sc = new Scanner(System.in);
         switch (k) {
-            case '+': System.out.println("\n " + a + " + " + b + " = " + (r = Somma(a, b)));break;
-            case '-': System.out.println("\n " + a + " - " + b + " = " + (r = Sottrazione(a, b)));break;
-            case '*': System.out.println("\n " + a + " * " + b + " = " + (r = Moltiplicazione(a, b)));break;
-            case '/': System.out.println("\n " + a + " / " + b + " = " + (r = Divisione(a, b)));break;
+            case '+': System.out.println("\n " + a + " + " + b + " = " + (r = somma()));break;
+            case '-': System.out.println("\n " + a + " - " + b + " = " + (r = sottrazione()));break;
+            case '*': System.out.println("\n " + a + " * " + b + " = " + (r = moltiplicazione()));break;
+            case '/': System.out.println("\n " + a + " / " + b + " = " + (r = divisione()));break;
             default: System.out.println("Uscita calcolatrice\n");
         }
         if(k == '*' || k == '+' || k == '-' || k == '/'){
@@ -32,47 +32,41 @@ public class Operazoni {
             if(k == '*' || k == '+' || k == '-' || k == '/') {
                 c = sc.nextFloat();
             }
-            Scelta(r, c, k);
+            a = r;
+            b = c;
+            scelta();
         }
     }
 
     /**
      * Operazione
-     * @param a numero 1
-     * @param b numero 2
      * @return risultato
      */
-    public static float Somma(float a, float b){
+    public float somma(){
         return a+b;
     }
 
     /**
      * Operazione
-     * @param a numero 1
-     * @param b numero 2
      * @return risultato
      */
-    public static float Sottrazione(float a, float b){
+    public float sottrazione(){
         return a-b;
     }
 
     /**
      * Operazione
-     * @param a numero 1
-     * @param b numero 2
      * @return risultato
      */
-    public static float Moltiplicazione(float a, float b){
+    public float moltiplicazione(){
         return a*b;
     }
 
     /**
      * Operazione
-     * @param a numero 1
-     * @param b numero 2
      * @return risultato
      */
-    public static float Divisione(float a, float b){
+    public float divisione(){
         return a/b;
     }
 }

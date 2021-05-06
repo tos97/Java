@@ -2,19 +2,15 @@ import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Fattoriale {
+    private int n;
+    private BigInteger s;
 
-    public static void Gestore() {
-        Scanner sc = new Scanner(System.in);
-        int k;
-        BigInteger s = BigInteger.ONE;
-        System.out.println("Inserisci un numero:");
-        k = sc.nextInt();
-        System.out.print("\n" + k + "! = ");
-        Stampa(k, s);
-
+    public Fattoriale(int n, BigInteger s){
+        this.n = n;
+        this.s = s;
     }
 
-    public static void Stampa(int n, BigInteger s){
+    public void stampa(){
         if(n < 0)
             System.out.println("ERRORE\nN negativo\n");
         else {
@@ -22,7 +18,8 @@ public class Fattoriale {
                 System.out.println(s +"\n");
             else {
                 s = s.multiply(BigInteger.valueOf(n));
-                Stampa(n - 1, s);
+                n--;
+                stampa();
             }
         }
     }
