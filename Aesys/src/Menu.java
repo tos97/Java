@@ -18,7 +18,7 @@ public class Menu {
     public void gestoreFibonacci() {
         System.out.println("Inserisci quanti numeri stampare:");
         n = sc.nextInt();
-        Fibonacci f = new Fibonacci(n, BigInteger.ONE, BigInteger.ZERO);
+        Fibonacci f = new Fibonacci(n);
         f.stampa();
         System.out.println();
     }
@@ -65,14 +65,21 @@ public class Menu {
                 m.carica();
                 break;
             default:
-                System.out.println("ERRORE");
+                System.err.println("ERRORE\n");
         }
-        System.out.println("\nScegli:\n 0) Stampa Verticale\n 1) Stampa Orizontale");
-        n = sc.nextInt();
-        switch (k){
-            case 0: m.verticale();break;
-            case 1: m.orizzontale();break;
-            default: System.out.println("ERRORE");
+        if (k == 0 || k == 1) {
+            System.out.println("\nScegli:\n 0) Stampa Verticale\n 1) Stampa Orizontale");
+            n = sc.nextInt();
+            switch (k) {
+                case 0:
+                    m.verticale();
+                    break;
+                case 1:
+                    m.orizzontale();
+                    break;
+                default:
+                    System.out.println("ERRORE");
+            }
         }
     }
 

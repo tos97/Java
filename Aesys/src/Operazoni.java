@@ -5,10 +5,10 @@ public class Operazoni {
     private char k;
 
     /**
-     *
-     * @param a
-     * @param b
-     * @param k
+     * Costruttore Operazioni
+     * @param a numero 1 da salvare preso dalla tastira
+     * @param b numero 2 da salvare preso dalla tastira
+     * @param k operando da salvare preso dalla tastira
      */
     public Operazoni(float a, float b, char k){
         this.a = a;
@@ -39,32 +39,32 @@ public class Operazoni {
     }
 
     /**
-     * Operazione
-     * @return risultato
+     * Somma
+     * @return risultato somma
      */
     public float somma(){
         return a+b;
     }
 
     /**
-     * Operazione
-     * @return risultato
+     * Sottrazione
+     * @return risultato sottrazione
      */
     public float sottrazione(){
         return a-b;
     }
 
     /**
-     * Operazione
-     * @return risultato
+     * Moltiplicazione
+     * @return risultato moltiplicazione
      */
     public float moltiplicazione(){
         return a*b;
     }
 
     /**
-     * Operazione
-     * @return risultato
+     * Divisione
+     * @return risultato divisione
      */
     public float divisione(){
         return a/b;

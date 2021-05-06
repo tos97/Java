@@ -1,10 +1,14 @@
 import java.math.BigInteger;
-import java.util.Scanner;
 
 public class Fattoriale {
     private int n;
     private BigInteger s;
 
+    /**
+     * Costruttore Fattoriale
+     * @param n numero da fattoriazzare
+     * @param s somma fattorizzazione
+     */
     public Fattoriale(int n, BigInteger s){
         this.n = n;
         this.s = s;

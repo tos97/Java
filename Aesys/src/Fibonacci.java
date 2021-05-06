@@ -3,12 +3,14 @@ import java.util.Scanner;
 
 public class Fibonacci {
     private int n;
-    private BigInteger k,p;
+    private BigInteger k = BigInteger.ONE, p = BigInteger.ZERO;
 
-    public Fibonacci(int n, BigInteger k, BigInteger p){
+    /**
+     * Costruttore Fibonacci
+     * @param n numero di elementi da stampare
+     */
+    public Fibonacci(int n){
         this.n = n;
-        this.k = k;
-        this.p = p;
     }
 
     public void stampa(){

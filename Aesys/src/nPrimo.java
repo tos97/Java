@@ -3,6 +3,10 @@ import java.util.Scanner;
 public class nPrimo {
     private int n,i = 2;
 
+    /**
+     * Costruttore che controlla se n è primo
+     * @param n numoero da controllare
+     */
     public nPrimo(int n){
         this.n = n;
     }
